@@ -12,19 +12,19 @@
 /*underline links in paragraphs and lists*/ 
 p a {      
     color: #9d2235;  
-    text-decoration: underline !important;  
+    text-decoration: none !important;  
 }  
 li a {      
     color: #9d2235;  
-    text-decoration: underline !important;  
+    text-decoration: none !important;  
 }  
 
 /*no underline on hover for paragraphs and lists*/
 p a:hover {  
-    text-decoration: none !important;  
+    text-decoration: underline !important;  
 }  
 li a:hover {  
-    text-decoration: none !important; 
+    text-decoration: underline !important; 
 }    
 
 /*underline headings on hover only*/ 
