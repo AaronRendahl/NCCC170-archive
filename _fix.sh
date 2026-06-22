@@ -116,6 +116,9 @@ mv $orig $new
 
 ##########
 ## extract images
+
+## https://jmuccigr.github.io/blog/2020/08/07/image-from-PDFs/
+
 orig="photos-2019.pdf"
 new="photos2019"
 pdfimages -list $orig
