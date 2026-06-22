@@ -76,3 +76,41 @@ nav a {
     padding-right: 15px !important;
     font-size: 20px !important;
 }
+
+/* ADDITIONAL CSS */
+#et_builder_outer_content .db_pb_button_2,
+.db_pb_button_2 {
+	margin-left: 30px
+}
+
+img.latex {
+	vertical-align: middle;
+	border: none;
+}
+
+ 
+-Beautified CSS-
+ 
+#wp-admin-bar-abm-login {
+	display: block !important
+}
+
+body .wp-video-shortcode video,
+body video.wp-video-shortcode {
+	margin: 0;
+	padding: 0;
+	background: 0 0;
+	border: none;
+	box-shadow: none;
+	min-width: 0;
+	height: auto;
+	min-height: 0
+}
+
+.screen-reader-text:not(button) {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden
+}
