@@ -45,6 +45,9 @@ perl -pi -ne 's|<style id="et-builder-googlefonts-cached-inline">.*</style>|<lin
 perl -0777 -i -pe "s|<style id='wp-block-library-theme-inline-css.*0000}.</style>|<link rel='stylesheet' id='wp-block-library-theme-inline-css' href='style_theme_inline.css' type='text/css' media='all' />|gs" *.html
 perl -0777 -i -pe "s|<style id=\"et-divi-customizer-global-cached-inline-styles\">.*24%}</style>|<link rel='stylesheet' id='et-divi-customizer-global-cached-inline-styles' href='style_cached_inline.css' type='text/css' media='all' />|gs" *.html
 
+perl -pi -ne 's|wp-includes/css/dist/block-library/style.min.css\?ver=6.0.2.css|wp-block-library.style.min.css|g' *.html
+
+
 ### remove footer and svg
 perl -0777 -i -pe 's|<footer.*</footer> <!-- #main-footer -->||gs' *.html
 perl -pi -e 's|<svg.*</svg> *||g' *.html
