@@ -12,6 +12,8 @@ perl -pi -e 's/body{--wp--preset--color--black.*//g' */*.html
 perl -pi -e 's/<link rel="wlwmanifest".*//g' */*.html
 perl -pi -e 's/<link rel="pingback".*//g' *.html
 
+perl -pi -e 's/<meta http-equiv="X-UA-Compatible" content="IE=edge">//'g *.html
+
 perl -pi -e 's|<p><a href="http://wordpressua.uark.edu/wp-admin">Site admin</a></p>||g' */*.html
 perl -pi -e 's|<link rel="https://api.w.org/" href="../wp-json/index.html" />||g' */*.html
 perl -pi -e 's|<meta name="generator".*||g' */*.html
@@ -37,15 +39,14 @@ perl -pi -ne "s|<script type='text/javascript' src='https://wordpressua.*||" *.h
 perl -pi -ne 's|<style id="et-builder-googlefonts-cached-inline">.*</style>|<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato" />|g' *.html
 
 perl -0777 -i -pe "s|<style id='wp-block-library-theme-inline-css.*0000}.</style>|<link rel='stylesheet' id='wp-block-library-theme-inline-css' href='style_theme_inline.css' type='text/css' media='all' />|gs" *.html
-
-perl -pi -ne "s/style_theme_inline.css/'style_theme_inline.css'/g" *.html
-
 perl -0777 -i -pe "s|<style id=\"et-divi-customizer-global-cached-inline-styles\">.*24%}</style>|<link rel='stylesheet' id='et-divi-customizer-global-cached-inline-styles' href='style_cached_inline.css' type='text/css' media='all' />|gs" *.html
 
 ### remove footer and svg
 perl -0777 -i -pe 's|<footer.*</footer> <!-- #main-footer -->||gs' *.html
 perl -pi -e 's|<svg.*</svg> *||g' *.html
 perl -pi -e 's|<meta.*||g' *.html
+
+#perl -pi -e 's|%3F|\?|g' *.html
 
 ### remove scripts
 perl -0777 -i -pe 's|</script>|<XXX>|' *.html
