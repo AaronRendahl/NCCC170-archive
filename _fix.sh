@@ -43,7 +43,9 @@ perl -pi -ne 's|<img alt="NCCC 170".*||g' *.html
 
 
 perl -0777 -i -pe 's!<style>\s*/. Display.*important;\s*}\s*</style>!!gs' *.html
-
+perl -0777 -i -pe 's!<style type.*CDATA.* \*/\s*</style>!!gs' *.html
+perl -0777 -i -pe 's!<style>\s*#et_builder.*30px}\s*</style>!!gs' *.html
+perl -0777 -i -pe 's!<style type.*hidden}\s*</style>!!gs' *.html
 
 ## updated font stylesheet
 perl -pi -ne 's|<style id="et-builder-googlefonts-cached-inline">.*</style>|<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato" />|g' *.html
