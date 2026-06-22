@@ -27,6 +27,9 @@ perl -pi -e 's|^</a>||' *.html
 perl -i -ne 'print if /\S/' *.html
 perl -i -ne 'print if /\S/' */*.html
 
+perl -0777 -i -pe "s|<p>\s*</p>||gs" *.html
+
+
 ## remove rest of canonical links
 grep '<link rel="canon' *.html
 grep "<link rel='short" *.html
