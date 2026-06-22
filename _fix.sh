@@ -26,7 +26,7 @@ perl -pi -e 's|.*\.container.*||' *.html
 perl -0777 -i -pe 's|<div class="et_search_outer">.*close_search_field">\s*</span>\s*</div>\s*</div>||s' *.html
 
 perl -0777 -i -pe 's|<div id="et_top_search">.*toggle">\s*</span>\s*</div>\s*</div>||sg' *.html
-
+perl -0777 -i -pe 's|<h5 id="logo-tagline">\s*</h5>||sg' *.html
 
 ## remove blank lines
 perl -i -ne 'print if /\S/' *.html
