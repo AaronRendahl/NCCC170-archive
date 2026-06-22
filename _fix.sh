@@ -36,9 +36,11 @@ perl -pi -ne "s|<script type='text/javascript' src='https://wordpressua.*||" *.h
 ## updated font stylesheet
 perl -pi -ne 's|<style id="et-builder-googlefonts-cached-inline">.*</style>|<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato" />|g' *.html
 
-perl -0777 -i -pe "s|<style id='wp-block-library-theme-inline-css' type='text/css'>.*000}\n</style>|<link rel='stylesheet' id='wp-block-library-theme-inline-css' href="style_theme_inline.css" type='text/css' media='all' />|g" *.html
-perl -0777 -i -pe "s|<style id='wp-block-library-theme-inline-css.*</style>|<link rel='stylesheet' id='wp-block-library-theme-inline-css' href="style_theme_inline.css" type='text/css' media='all' />|gs" index.html
+perl -0777 -i -pe "s|<style id='wp-block-library-theme-inline-css.*0000}.</style>|<link rel='stylesheet' id='wp-block-library-theme-inline-css' href='style_theme_inline.css' type='text/css' media='all' />|gs" *.html
 
+perl -pi -ne "s/style_theme_inline.css/'style_theme_inline.css'/g" *.html
+
+perl -0777 -i -pe "s|<style id=\"et-divi-customizer-global-cached-inline-styles\">.*24%}</style>|<link rel='stylesheet' id='et-divi-customizer-global-cached-inline-styles' href='style_cached_inline.css' type='text/css' media='all' />|gs" *.html
 
 ### remove footer and svg
 perl -0777 -i -pe 's|<footer.*</footer> <!-- #main-footer -->||gs' *.html
