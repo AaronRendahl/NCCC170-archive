@@ -17,6 +17,7 @@ perl -pi -e 's/<meta http-equiv="X-UA-Compatible" content="IE=edge">//'g *.html
 perl -pi -e 's|<p><a href="http://wordpressua.uark.edu/wp-admin">Site admin</a></p>||g' */*.html
 perl -pi -e 's|<link rel="https://api.w.org/" href="../wp-json/index.html" />||g' */*.html
 perl -pi -e 's|<meta name="generator".*||g' */*.html
+perl -pi -e 's|<meta content="UARK Divi Theme - Fullwidth v.1.0.0" name="generator"/>||g' *.html
 
 perl -pi -e 's|<a href="https://nccc170.uark.edu/nccc170report17-1k61t7c/NCCC170Report17-1k61t7c.pdf">||g' *.html
 perl -pi -e 's|^</a>||' *.html
