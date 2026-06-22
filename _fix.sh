@@ -22,6 +22,10 @@ perl -pi -e 's|<meta content="UARK Divi Theme - Fullwidth v.1.0.0" name="generat
 perl -pi -e 's|<a href="https://nccc170.uark.edu/nccc170report17-1k61t7c/NCCC170Report17-1k61t7c.pdf">||g' *.html
 perl -pi -e 's|^</a>||' *.html
 
+perl -pi -e 's|.*\.container.*||' *.html
+perl -0777 -i -pe 's|<div class="et_search_outer">.*close_search_field">\s*</span>\s*</div>\s*</div>||s' *.html
+
+
 
 ## remove blank lines
 perl -i -ne 'print if /\S/' *.html
