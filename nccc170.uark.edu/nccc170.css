@@ -114,3 +114,14 @@ body video.wp-video-shortcode {
 	width: 1px;
 	overflow: hidden
 }
+
+ol li {
+  list-style-position: outside; 
+  margin-left: 2em;
+}
+
+ul li {
+  list-style: none;
+  list-style-position: none; 
+  margin-left: 1em;
+}
