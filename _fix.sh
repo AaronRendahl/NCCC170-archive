@@ -36,9 +36,14 @@ perl -pi -ne "s|<script type='text/javascript' src='https://wordpressua.*||" *.h
 ## updated font stylesheet
 perl -pi -ne 's|<style id="et-builder-googlefonts-cached-inline">.*</style>|<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato" />|g' *.html
 
+perl -0777 -i -pe "s|<style id='wp-block-library-theme-inline-css' type='text/css'>.*000}\n</style>|<link rel='stylesheet' id='wp-block-library-theme-inline-css' href="style_theme_inline.css" type='text/css' media='all' />|g" *.html
+perl -0777 -i -pe "s|<style id='wp-block-library-theme-inline-css.*</style>|<link rel='stylesheet' id='wp-block-library-theme-inline-css' href="style_theme_inline.css" type='text/css' media='all' />|gs" index.html
 
-### remove footer
+
+### remove footer and svg
 perl -0777 -i -pe 's|<footer.*</footer> <!-- #main-footer -->||gs' *.html
+perl -pi -e 's|<svg.*</svg> *||g' *.html
+perl -pi -e 's|<meta.*||g' *.html
 
 ### remove scripts
 perl -0777 -i -pe 's|</script>|<XXX>|' *.html
